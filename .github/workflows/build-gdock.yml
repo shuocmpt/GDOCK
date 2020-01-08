@@ -52,6 +52,10 @@ jobs:
       run: |
         git clone https://github.com/coolsnowwolf/lede lede
 
+    - name: 插件集成
+      run: |
+        git clone https://github.com/brokeld/luci-app-koolproxyR.git
+        
     - name: Update feeds
       run: cd lede && ./scripts/feeds update -a
 
