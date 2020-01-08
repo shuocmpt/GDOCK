@@ -8,9 +8,9 @@ name: Build G-DOCK
 on: 
   release:
     types: [published]
-  push:
-    branches: 
-      - master
+  # push:
+    # branches: 
+      # - master
 
 jobs:
   build:
@@ -55,6 +55,7 @@ jobs:
     - name: 插件集成
       run: |
         git clone https://github.com/brokeld/luci-app-koolproxyR.git
+        git clone https://github.com/clowwindy/ChinaDNS.git
         
     - name: Update feeds
       run: cd lede && ./scripts/feeds update -a
